@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Formula Evaluator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>🧾 Basic Price Calculation</h2>
+  <p>Formula: <code>count * fee - discount</code></p>
+  <input type="text" id="fee" placeholder="قیمت واحد" />
+  <input type="text" id="count" placeholder="تعداد" />
+  <input type="text" id="discount" placeholder="تخفیف" />
+  <div class="formula" evaluator="count * fee - discount"></div>
+
+
+  <h2>🔵 Area and Perimeter of a Circle</h2>
+  <p>Formula: <code>Math.PI * radius * radius</code></p>
+  <input type="text" id="radius" placeholder="Radius" />
+  <div class="formula" evaluator="Math.PI * radius * radius"></div>
+
+  <p>Formula: <code>2 * Math.PI * radius</code></p>
+  <div class="formula" evaluator="2 * Math.PI * radius"></div>
+
+  <hr>
+
+  <h2>⚠️ Invalid Formula Example</h2>
+  <p>Formula: <code>radius **</code></p>
+  <div class="formula" evaluator="radius **"></div>
+
+  <hr>
+
+  <h2>💰 Salary Calculations</h2>
+  <p>Formula: <code>salary ** 2</code></p>
+  <input type="text" id="salary" placeholder="Salary" />
+  <div class="formula" evaluator="salary ** 2"></div>
+
+  <p>Formula: <code>salary + 2 ** (monthEmployed) * bonus</code></p>
+  <input type="text" id="monthEmployed" placeholder="Months Employed" />
+  <input type="text" id="bonus" placeholder="Bonus" />
+  <div class="formula" evaluator="salary + 2 ** (monthEmployed) * bonus"></div>
+
+  <p>Formula: <code>salary + 2 ** (monthEmployed) * bonus + gift</code> (no gift input → will show error)</p>
+  <div class="formula" evaluator="salary + 2 ** (monthEmployed) * bonus + gift"></div>
+
+  <script src="eval.js"></script>
+</body>
+</html>
